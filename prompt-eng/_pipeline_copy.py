@@ -163,13 +163,17 @@ if __name__ == "__main__":
     MESSAGE = "1 + 1"
     PROMPT = MESSAGE 
     payload = create_payload(
-                         target="open-webui",   
-                         model="phi4:latest", 
+                         target="ollama",   
+                         model="llama3.2:latest", 
                          prompt=PROMPT, 
                          temperature=1.0, 
-                         num_ctx=2048, #Initial Value 5555555. Changed to 500. Then to 2048
-                         num_predict=10) #Initial Value 1. Changed to 5. Now to 6.
+                         num_ctx=500, #Initial Value 5555555
+                         num_predict=600) #Initial Value 1. Changed to 600
 
     time, response = model_req(payload=payload)
-    print(response)
+    #print(response)
+    if response:
+        print("✅ Response received:", response)
+    else:
+        print("⚠️ AI returned an EMPTY response!")
     if time: print(f'Time taken: {time}s')
