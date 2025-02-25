@@ -131,6 +131,5 @@ This research demonstrates how **advanced prompt engineering techniques** optimi
 ---
 
 ### **🔗 Connect with Us**
-📩 **Contact:** [Your Email]  
 📂 **GitHub Repo:** [https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2)  
 
