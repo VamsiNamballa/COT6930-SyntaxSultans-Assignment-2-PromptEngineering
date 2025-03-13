@@ -47,12 +47,12 @@ The most important __main__() function imported functions 2 and 3 and an object 
 
 Let us try to understand each of the parameters.
 
-•	Initial values of target and model were "ollama" and "llama3.2:latest" respectively. But this involves downloading the model on my personal computer which demands more space. Hence changed them to “open-webui” and “phi4-latest” which connects to the remote server.
-•	The temperature parameter controls the randomness of the model's responses. The smaller the value, the more the responses will be predictable; the larger, the more diverse and creative. The model is at equilibrium between coherence and diversity when it is set to 1.0. A high value will yield uncoherent responses, and a low value will make them redundant.
-•	The num_ctx parameter determines the number of tokens the model retains as context. A higher value helps in longer interaction coherence but at the expense of higher computational burdens. Initially set to an impossible 5,555,555, it was later dropped to 500 before being settled at 2048. This introduces effective handling while still maintaining enough context to offer meaningful response.
-•	The num_predict parameter dictates the amount of tokens produced by the model. It was initially set to 1 and incrementally increased to 10. This adjustment is an effort to counteract response size insufficiency. A lower value produces short responses, whereas a higher value allows elaboration. Maintaining it at 10 ensures substantial responses without sparsity.
+•	Initial values of target and model were "ollama" and "llama3.2:latest" respectively. But this involves downloading the model on my personal computer which demands more space. Hence changed them to “open-webui” and “phi4-latest” which connects to the remote server.  
+•	The temperature parameter controls the randomness of the model's responses. The smaller the value, the more the responses will be predictable; the larger, the more diverse and creative. The model is at equilibrium between coherence and diversity when it is set to 1.0. A high value will yield uncoherent responses, and a low value will make them redundant.  
+•	The num_ctx parameter determines the number of tokens the model retains as context. A higher value helps in longer interaction coherence but at the expense of higher computational burdens. Initially set to an impossible 5,555,555, it was later dropped to 500 before being settled at 2048. This introduces effective handling while still maintaining enough context to offer meaningful response.  
+•	The num_predict parameter dictates the amount of tokens produced by the model. It was initially set to 1 and incrementally increased to 10. This adjustment is an effort to counteract response size insufficiency. A lower value produces short responses, whereas a higher value allows elaboration. Maintaining it at 10 ensures substantial responses without sparsity.  
 
-Let us examine each prompt engineering technique in the Github repository.
+Let us examine each prompt engineering technique in the Github repository.  
 
 ## 1.	Zero Shot Technique
 
