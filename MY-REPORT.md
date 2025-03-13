@@ -30,9 +30,9 @@ D:\Study at FAU\Semester 3\Gen AI\Assignment-2\prompt-eng.
 This is where the repository has been cloned into.
 Opened the command prompt terminal and typed the following command:
  
-
-git clone https://github.com/username/repository.git
-
+```
+git clone https://github.com/genilab-fau/prompt-eng
+```
 Our repository has been successfully copied here. 
 
 We then opened the file prompt-eng/_pipeline.py to understand its structure.
@@ -823,7 +823,7 @@ Other approaches, such as Zero-Shot Prompting, Self-Consistency, and Retrieval-A
 By incorporating Prompt Chaining, Few-Shot Prompting, and Generate Knowledge Prompting, our chatbot will be interactive, structured, and responsive to learners' needs. Prompt chaining will give step-by-step, interactive instructions, few-shot prompting will bring better coherence to responses, and generate knowledge prompting will introduce depth and detail into explanations. This mixture will not just turn our chatbot into an information outlet but also into a good digital tutor, one that can suit different learning patterns and make it easy for students to grasp difficult ideas. 
 
    
-[GitHub Repo Link](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2)
+[GitHub Repo Link](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/tree/main)
 
 
 ## Final Thoughts:-
