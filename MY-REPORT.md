@@ -351,7 +351,7 @@ payload = create_payload(target="open-webui",
 
 Output:
 
-[Meta Level 1 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-1-prompt.txt)
+[Meta Level 1 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-1-prompt.txt)  
 [Meta Level 1 Prompt Result](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-1-prompt-Result.txt)
 
 
@@ -372,7 +372,7 @@ payload = create_payload(target="open-webui",
 
 ## Output:
 
-[Meta Level 2 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-2-prompt.txt)
+[Meta Level 2 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-2-prompt.txt)  
 [Meta Level 2 Prompt Result](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-2-prompt-Result.txt)
 
 
