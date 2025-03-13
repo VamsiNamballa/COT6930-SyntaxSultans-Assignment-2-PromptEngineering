@@ -1,7 +1,8 @@
-Assignment-2 COT6930 PROMPT ENGINEERING
-SYNTAXSULTANS: 
+## Assignment-2
+## COT6930 PROMPT ENGINEERING
+## SYNTAXSULTANS: 
 A DISCORD BASED CHATBOT THAT WORKS AS A STUDY COMPANION THAT HELPS STUDENTS UNDERSTAND ADVANCED CONCEPTS IN A MUCH SIMPLER WAY.
-1-Liner Description:
+## 1-Liner Description:
 This research explores advanced prompting techniques to enhance requirement analysis for a Discord-based educational chatbot using the phi4 model. The goal is to evaluate different prompting strategies and optimize chatbot capabilities for student learning.
 
 Authors:
