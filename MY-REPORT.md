@@ -82,6 +82,7 @@ num_predict=2000  # The value was initially 100, because the question was simple
 
 Output:
 
+[File Name](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/zero-shot-copy-1-req-analysis-response.txt)
  
 Time Taken for the Response: 26.456s
 
