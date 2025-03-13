@@ -37,11 +37,11 @@ Our repository has been successfully copied here.
 
 We then opened the file prompt-eng/_pipeline.py to understand its structure.
 
-It is in this file where the functions required for the project are defined here.
+It is in this file where the functions required for the project are defined here.    
 
-[1] 	load_config()
-[2] 	create_payload()
-[3] 	model_req()
+[1] 	load_config()  
+[2] 	create_payload()  
+[3] 	model_req()    
 
 The most important __main__() function imported functions 2 and 3 and an object of create_payload() has been created where several parameters are defined.
 
