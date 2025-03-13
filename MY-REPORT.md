@@ -13,17 +13,17 @@ Neethika Prodduturi (Z23814182)
 ## Academic Supervisor:		
 Dr. Fernando Koch
 
-Research Question:
+## Research Question:
 How can different prompting techniques improve the requirement analysis process for developing an effective Discord-based AI study companion using phi4 ?
 
 
-What is already known about this topic?
+## What is already known about this topic?
 Large Language Models (LLMs) like Llama 3.2 or phi4 can generate structured requirement analysis reports.
 Prompt engineering techniques (zero-shot, few-shot, chain-of-thought, etc.) influence the accuracy and depth of chatbot design insights.
 AI-driven study companions have shown positive impacts in education by simplifying complex topics.
 
-Our Team’s Work:
-Setup:	
+## Our Team’s Work:
+## Setup:	
 We have opened the Visual Studio Code and Opened the folder
 D:\Study at FAU\Semester 3\Gen AI\Assignment-2\prompt-eng.
 
@@ -54,7 +54,7 @@ Let us try to understand each of the parameters.
 
 Let us examine each prompt engineering technique in the Github repository.
 
-1.	Zero Shot Technique
+## 1.	Zero Shot Technique
 
 Let us first examine the code snippet from the initial file ‘zero_shot.ipynb’:
 
@@ -117,7 +117,7 @@ The second response is better because it takes a more student-centered, engaging
 
 While the first response excels at technical planning, the second response excels at discussing how the chatbot will improve education, making it the superior response if the concern of the audience is usability, engagement, and personalized learning.
 
-2.	Self-Consistency Technique
+## 2.	Self-Consistency Technique
 
 The self-consistency approach is an AI technique in which a series of various responses are created to a single question and the most common or logically consistent response is selected. This is achieved for enhancing accuracy by eliminating wrong or random responses, hence being best suited for reasoning-type tasks such as mathematics, logic, and decision-making. By eliminating inconsistent answers, it minimizes hallucinations and gives more accurate outputs. This technique is essential in applications where precision and consistency are critical, as it reinforces the most correct and coherent answer.
 
@@ -172,7 +172,7 @@ For sample interactions, Response 1 is focused largely on science-oriented topic
 
 Both responses are consistent logically, making the requirement analysis coherent and reasoned. They vary, however, in that Response 2 goes a step further by focusing more on interaction, engagement, and AI-driven personalization, hence the better response overall. If the goal is to achieve maximum student engagement, retention, and adaptability, Response 2 is the better option.
 
-3.	Prompt-Template Technique
+## 3.	Prompt-Template Technique
 
 A prompt template is a formatted text model employed to produce AI responses uniformly by having placeholders for dynamic input values. Rather than typing new prompts manually every time, a template offers a reusable model in which variables are inserted to personalize the request. This method enhances efficiency, precision, and scalability, and it's particularly beneficial in chatbots, automation, and content creation. As an example, the prompt *"{prompt_type} Summarize the following {text_type} in {word_limit} words: {text}"* allows users to give the type of content, the word limit, and the text as dynamic values. By employing prompt standardization, this makes the method offer better AI performance with scope also left for difference in application contexts, such as education-based AI tutors, code generation, and content generation for formatting.
 
@@ -180,7 +180,7 @@ We use “prompt_template.ipynb” to do the enhancements.
 
 Let us first create a prompt that follows prompt-template:
 
-Level-1 prompt:
+## Level-1 prompt:
 TEMPLATE_BEFORE = "You are an AI expert in prompt engineering and chatbot development.\n"
 
 MESSAGE = ("Generate a well-structured prompt that can be used to perform a requirement analysis "
@@ -316,7 +316,7 @@ Output Below:
  
 
 
-Comparison of Responses:
+## Comparison of Responses:
 
 Both responses offer a formal requirement analysis for implementing educational ability into a Discord-based chatbot. Both, however, are quite dissimilar in depth, structure, and detail.
 
@@ -328,7 +328,7 @@ In addition, the second response provides a clear project schedule and milestone
 
 The second response is better because it is more organized, more detailed, and more realistic for real development. While the first response provides a high-level feature list, the second response provides a well-organized requirement analysis that covers both educational effectiveness and technical feasibility. It is more suitable for project planning and implementation and thus the better response for any individual who wants to actually develop the educational chatbot, not merely design it.
 
-4.	Meta Technique
+## 4.	Meta Technique
 
 
 Meta Technique for AI and prompt engineering is a self-referential approach that instructs AI to refine its reasoning, structure, and output quality. Instead of answering a question outright, the AI is requested to analyze its own thinking, polish its response, or select between multiple possible responses before selecting the best one. The technique enhances accuracy, logical reasoning, and structured outputs by instructing the AI to edit itself and improve its responses.
@@ -366,10 +366,10 @@ payload = create_payload(target="open-webui",
                          num_ctx=300, 
                          num_predict=300)
 
-Output:
+## Output:
   
 
-Comparison of two results:
+## Comparison of two results:
 
 The Level-1-Prompt result and Level-2-Prompt result provide structured requirement analyses for integrating educational functionalities into a Discord-based chatbot, but they differ in terms of depth, clarity, and comprehensiveness. The Level-1-Prompt result presents an organized list of focus areas but lacks detailed explanations in some sections. In contrast, the Level-2-Prompt result follows a well-structured approach with numbered sections, sub-sections, and detailed explanations, making it easier to understand and implement. The logical sequencing in the Level-2-Prompt result also improves readability and clarity.
 When comparing the clarity and depth of information, the Level-1-Prompt result provides broad categories but does not elaborate on the implementation of features. The Level-2-Prompt result, however, not only defines key requirements but also explains how they can be integrated into the chatbot. For example, it details API usage, interaction design, and command syntax, which are essential for a successful implementation. This makes the Level-2-Prompt result more actionable and valuable for developers.
@@ -378,7 +378,7 @@ Technical considerations are another area where the Level-2-Prompt result excels
 Compliance and scalability are also better addressed in the Level-2-Prompt result. While the Level-1-Prompt result mentions scalability in a general sense, the Level-2-Prompt result thoroughly discusses GDPR compliance, data protection laws, and steps for ongoing regulatory adherence. It also provides a roadmap for regular compliance reviews, aligning with legal and ethical standards.
 The Level-2-Prompt result is the stronger choice because it provides a more detailed, structured, and actionable requirement analysis. It defines what needs to be done and explains how to implement each feature effectively. With its focus on technical integration, security, user experience, and compliance, the Level-2-Prompt result offers a more comprehensive plan, making it the best option for enhancing the chatbot’s educational functionalities. 
 
-5.	Few Shots Technique
+## 5.	Few Shots Technique
 
 Few-Shot is a machine learning and prompt engineering method where a model is given a small number of examples—typically two to five—so that it has an idea of the task before the response is generated. It works very well with large language models, as this provides context without requiring much retraining or fine-tuning. The model can infer patterns and apply them to new, unseen inputs by including a few relevant examples in the prompt.
 
@@ -386,7 +386,7 @@ Few-shot prompting accomplishes this by providing the model with a few example i
 
 This technique is particularly beneficial as it reduces the requirement for large amounts of labeled data or fine-tuned models but still improves precision. It allows models to generalize better than zero-shot learning, where no examples are provided, but not as much as traditional supervised learning, which requires extensive numbers of marked data. Few-shot prompting is applicable in extensive domains of education software, chatbots, and AI services where flexibility and quick learning are required.
 
-First Experimentation:-
+## First Experimentation:-
 
 MESSAGE = "I want to add an educational chatbot that helps students understand advanced concepts in a much easier way to my Discord-based bot."
 
@@ -418,7 +418,7 @@ In the above snippets, the few shot technique has been employed by adding one ex
 
 Output:
  
-Second Experimentation:
+## Second Experimentation:
 
 We tried to enhance the prompt by giving two examples this time.
 
@@ -456,7 +456,7 @@ Now, analyze the following request and generate the requirements:
 Output:
  
 
-Third Experimentation:
+## Third Experimentation:
 
 The prompt has nothing to change. Only the parameters are worked on.
 
@@ -477,7 +477,7 @@ Overall, Response 2 worked best, having achieved an optimal balance between dept
 In the future, we might improve our strategy by trying variations in instructions or formatting enhancements in responses to enhance readability and clarity further. It may also be worth trying different methods of presenting examples as part of the prompt to determine whether that also boosts the quality of responses.
 
 
-6.	Chain of Thought
+## 6.	Chain of Thought
 
 Chain of Thought (CoT) is an artificial intelligence and machine learning prompting method that aids in reasoning and problem-solving by inducing the model to break down complicated tasks into mid-level steps. Instead of giving a direct answer, the model is asked to reason stepwise, mimicking human thinking. This method is particularly useful in tasks requiring logical reasoning, solving math problems, or multi-step decision-making.
 
@@ -491,7 +491,7 @@ However, when prompted using Chain of Thought prompting, the model would produce
 
 This method is particularly helpful for learning chatbots, like the one you're building for Discord, since it not only enables students to get the correct answer but also learn the reasoning behind it. Applying Chain of Thought prompting can improve how your chatbot educates complex concepts in math, science, and logic-based subjects.
 
-First Experimentation:
+## First Experimentation:
 
 CHAIN_OF_THOUGHT = I am running a few minutes late; my previous meeting is running over.
 f"""
@@ -566,7 +566,7 @@ Third Experimentation:
 Temperature set to 0.5
  
 
-Comparison of responses:
+## Comparison of responses:
 
 As seen from our experiment, we can observe the influence of temperature values on responses in a Chain of Thought (CoT) prompting technique while investigating the necessities in deploying an educational chatbot in a Discord bot. Since we used the same prompt for all three responses, the differences in output were influenced directly by how the temperature differed.
 
@@ -578,11 +578,11 @@ The third response, with the temperature at 0.5, was the most structured and fac
 
 Based on these observations, we concluded that the most appropriate setting for generating structured requirement analyses is temperature 1.0. This setting ensures responses that are detailed, well-structured, and adaptive, making it the most appropriate to outline the functionality, user interaction, and integration requirements of our teaching chatbot. If we were attempting to do brainstorming or idea expansion, we might use a higher temperature of 1.2. Alternatively, if we wanted short, precise implementation steps, we might try lowering the temperature to 0.5.
 
-7.	Generate Knowledge Technique
+## 7.	Generate Knowledge Technique
 
 Generate Knowledge Prompting is a prompt engineering method whereby a model is first prompted to create applicable background knowledge prior to answering a question or solving a problem. This method strengthens reasoning, precision, and comprehension, especially where a literal response might lack sufficient context. Instead of producing a response instantly, the model is subjected to a two-step process: one, it recollects or generates fundamental information on the subject, and second, employs the same information in generating a well-versed answer. For example, when a question is asked about why the sky appears blue, instead of responding "because of Rayleigh scattering," the model would begin by explaining what Rayleigh scattering is—shorter wavelengths like blue light scatter more than longer wavelengths like red—before applying that understanding to provide an answer. This way of thinking enhances it, makes it more accurate in its responses, and gives better explanations, so it is extremely well suited for educational use. Utilizing Generate Knowledge Prompting on your Discord study chatbot can help students comprehend complex concepts more effectively by encouraging systematic thinking and step-by-step learning.
 
-Experimentation 1:
+## Experimentation 1:
 
 MESSAGE = ("Before performing the requirement analysis, first generate foundational knowledge on how AI-powered "
     "educational chatbots improve student learning, focusing on:\n"
@@ -602,18 +602,18 @@ MESSAGE = ("Before performing the requirement analysis, first generate foundatio
     "First, generate the relevant knowledge step-by-step, then use that knowledge to structure the final requirement analysis. "
     "Format the response with clear sections and bullet points for readability.")
 
-Experimentation 2: 
+## Experimentation 2: 
 Temperature set to 0.5
 
 Output:
  
-Experimentation 3:
+## Experimentation 3:
 Temperature is set to 1.4
 
 Output:
  
 
-Analysis:
+## Analysis:
 According to our experiment comparing the answers produced using the "Generate Knowledge (GK) prompting strategy," we observed the distinct impacts of the various "temperature settings" on the quality, organization, and applicability of the answers. Each temperature setting produced a distinctive response style that had different degrees of applicability of the demands of the chatbot analyzed and organized.
 
 The answer produced under "temperature 0.5" was most "organized, specific, and fact-based.". It provided clear and concise explanations so that every point of requirement analysis had been addressed in a coherent way. The response was "highly practical" and the best to utilize for "direct implementation" as it focused on providing information without unnecessary elaboration. However, while being very good in terms of clarity and precision, it was somewhat "less engaging" than the higher temperature responses because it avoided exploratory reasoning or innovative analogy.
@@ -626,7 +626,7 @@ Depending on our requirements, the perfect response is based on our analysis. If
 
 Because our focus is "requirement analysis for an educational chatbot," we should "appreciate the structured clarity of the 0.5 response," but "include some creative elements from the 0.7 response" to make it more interesting. We can also use the "1.4 response for creating novel feature ideas" if needed in the future.
 
-8.	Prompt Chaining Technique
+## 8.	Prompt Chaining Technique
 
 Prompt Chaining is a prompt engineering method in which two or more prompts are linked together in a sequence to guide an AI model through a complex task in incremental steps. Instead of formulating a final response in a single prompt, the task is broken down into intermediate steps, with each prompt building upon the output of its predecessor. This method improves reasoning, precision, and coherence and is therefore best used in problem-solving with multiple steps, content generation, and decision-making. Prompt chaining is being most widely used in educational chatbots, workflow automation, and guided AI interactions where a step-by-step approach must be used to obtain improved outputs.
 
@@ -698,7 +698,7 @@ if response_time3: print(f"Time taken: {response_time3}s")
 
 Output:
  
-9.	Retrieval Augmented Generation
+## 9.	Retrieval Augmented Generation
 
 Code:
 
@@ -748,7 +748,7 @@ Output:
  
 
 
-10.	Automatic Reasoning
+## 10.	Automatic Reasoning
 
 Automatic reasoning is a branch of artificial intelligence (AI) and computer science that is concerned with the ability to make computers reason logically and come to conclusions without any human interaction. It refers to how algorithms and formal logic are used to derive conclusions, establish proofs of theorems, analyze data, or make decisions based on inputs. Automatic reasoning has great implications in mathematics, formal verification, natural language processing, and expert systems.
 
@@ -804,5 +804,5 @@ By incorporating Prompt Chaining, Few-Shot Prompting, and Generate Knowledge Pro
 GITHUB REPO: https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2
 
 
-Final Thoughts:-
+## Final Thoughts:-
 This research contributes to AI-driven software engineering by demonstrating how advanced prompting techniques can be applied to automate the development of intelligent learning chatbots. Through enhanced requirement analysis methodologies, we aim to make AI-driven learning tools more effective and provide students with an easier-to-use study aid.
