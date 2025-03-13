@@ -103,7 +103,7 @@ temperature=0.7,
 num_ctx=2048, 
 num_predict=1200
 
- 
+ [Zero Shot Copy 1 Improved](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/zero-shot-copy-1-improved-req-analysis-response.txt)
 
 Time Taken for the Response: 25.643s
 
@@ -148,7 +148,7 @@ temperature=1.0,
                          num_ctx=100, 
                          num_predict=100
 
-
+[Self Consistency 1 Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/self-consistency-improvement-1-requirement-analysis.txt)
  
 
 Time Taken for the Response: 18.843s
@@ -157,7 +157,7 @@ Further Improvements:
 
 By default, the temperature was set to 1.0. I tried to experiment with changing the temperature to 0.5.
 
- 
+[Self Consistency 2 Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/self-consistency-improvement-2-requirement-analysis.txt) 
 
 Time Taken for the Response: 20.833s
 
@@ -199,7 +199,7 @@ num_predict=1000
 
 Output Below:
 
- 
+ [Prompt Template Level 1 Prompt Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/prompt-template-level-1-prompt.txt)
 
 Level-2 Prompt:
 
@@ -314,7 +314,7 @@ payload = create_payload(target="open-webui",
 
 Output Below:
 
- 
+ [Prompt Template Level 2 Prompt Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/prompt-template-level-2-prompt.txt)
 
 
 ## Comparison of Responses:
@@ -350,7 +350,10 @@ payload = create_payload(target="open-webui",
                          num_predict=300)
 
 Output:
-  
+
+[Meta Level 1 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-1-prompt.txt)
+[Meta Level 1 Prompt Result](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-1-prompt-Result.txt)
+
 
 
 Level-2 Meta Prompt:
@@ -368,7 +371,10 @@ payload = create_payload(target="open-webui",
                          num_predict=300)
 
 ## Output:
-  
+
+[Meta Level 2 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-2-prompt.txt)
+[Meta Level 2 Prompt Result](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-2-prompt-Result.txt)
+
 
 ## Comparison of two results:
 
