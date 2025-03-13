@@ -822,8 +822,8 @@ Other approaches, such as Zero-Shot Prompting, Self-Consistency, and Retrieval-A
 
 By incorporating Prompt Chaining, Few-Shot Prompting, and Generate Knowledge Prompting, our chatbot will be interactive, structured, and responsive to learners' needs. Prompt chaining will give step-by-step, interactive instructions, few-shot prompting will bring better coherence to responses, and generate knowledge prompting will introduce depth and detail into explanations. This mixture will not just turn our chatbot into an information outlet but also into a good digital tutor, one that can suit different learning patterns and make it easy for students to grasp difficult ideas. 
 
-GITHUB REPO:   
-[GitHub](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2)
+   
+[GitHub Repo Link](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2)
 
 
 ## Final Thoughts:-
