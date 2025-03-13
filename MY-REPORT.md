@@ -58,6 +58,7 @@ Let us examine each prompt engineering technique in the Github repository.
 
 Let us first examine the code snippet from the initial file ‘zero_shot.ipynb’:
 
+```
 MESSAGE = "What is 984 * log(2)"
 PROMPT = MESSAGE
 
@@ -79,7 +80,7 @@ num_ctx=200, # We want the model to remember large messages if possible
 num_predict=2000  # The value was initially 100, because the question was simple
 #However, the generation of a requirement analysis needs a large text as the output.
 #Hence, the value is now 200.
-
+```
 Output:
 
 [Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/zero-shot-copy-1-req-analysis-response.txt)
@@ -90,6 +91,7 @@ Improvization(‘zero_shot_copy-1-improved.ipynb’):
 
 In the previous prompt, the question was generic. No proper context was provided. Improvization is done in such a way that the discord-based chatbot is ready and only thing needed is an enhancement. Since the message is big, the model needs to remember more tokens for retaining the context. Hence, the value of num_ctx is set to 2048. The response should be bigger. So the value for num_predict is set to 1200.
 
+```
 MESSAGE = ("Perform a requirement analysis to enhance an existing Discord chatbot built using the Owlmind framework "
     "into an educational chatbot. The chatbot should simplify advanced topics for students using toy examples. "
     "Focus on educational improvements and provide:\n"
@@ -100,8 +102,8 @@ MESSAGE = ("Perform a requirement analysis to enhance an existing Discord chatbo
     "5. Example interactions demonstrating improved learning experience.\n"
     "Format the response with clear sections and bullet points for readability.")
 temperature=0.7, 
-num_ctx=2048, 
-num_predict=1200
+num_ctx=2048,
+```
 
  [Zero Shot Copy 1 Improved](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/zero-shot-copy-1-improved-req-analysis-response.txt)
 
@@ -126,6 +128,7 @@ The code snippet in the repository consists of the Zero-shot technique where no 
 
 Unlike the first technique, multiple files are not created. The same ipynb file ‘self_consistency.ipynb’ has multiple cells created for several improvements and experimentations.
 
+```
 MESSAGE = ("Perform a requirement analysis to enhance an existing Discord chatbot built using the Owlmind framework "
     "into an educational chatbot. The chatbot should simplify advanced topics for students using toy examples. "
     "Focus on educational improvements and provide:\n"
@@ -147,7 +150,7 @@ PROMPT = MESSAGE + ADDITIONAL
 temperature=1.0, 
                          num_ctx=100, 
                          num_predict=100
-
+```
 [Self Consistency 1 Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/self-consistency-improvement-1-requirement-analysis.txt)
  
 
@@ -180,7 +183,7 @@ A prompt template is a formatted text model employed to produce AI responses uni
 We use “prompt_template.ipynb” to do the enhancements.
 
 Let us first create a prompt that follows prompt-template:
-
+```
 ## Level-1 prompt:
 TEMPLATE_BEFORE = "You are an AI expert in prompt engineering and chatbot development.\n"
 
@@ -196,13 +199,13 @@ PROMPT = TEMPLATE_BEFORE + MESSAGE + "\n" + TEMPLATE_AFTER
 temperature=0.7, 
 num_ctx=100, 
 num_predict=1000
-
+```
 Output Below:
 
  [Prompt Template Level 1 Prompt Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/prompt-template-level-1-prompt.txt)
 
 Level-2 Prompt:
-
+```
 #### (1) Define the Prompt Template
 TEMPLATE_BEFORE = (
     "You are an AI expert in chatbot development and educational technology.\n"
@@ -311,7 +314,7 @@ payload = create_payload(target="open-webui",
                          temperature=0.7, 
                          num_ctx=2000, 
                          num_predict=2000)
-
+```
 Output Below:
 
  [Prompt Template Level 2 Prompt Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/prompt-template-level-2-prompt.txt)
@@ -335,7 +338,7 @@ The second response is better because it is more organized, more detailed, and m
 Meta Technique for AI and prompt engineering is a self-referential approach that instructs AI to refine its reasoning, structure, and output quality. Instead of answering a question outright, the AI is requested to analyze its own thinking, polish its response, or select between multiple possible responses before selecting the best one. The technique enhances accuracy, logical reasoning, and structured outputs by instructing the AI to edit itself and improve its responses.
 
 Let us start with a level-1 meta prompt
-
+```
 META_PROMPT = (
     "Generate a prompt that can be used to perform a requirement analysis "
     "for adding educational functionality to an existing Discord-based chatbot."
@@ -348,7 +351,7 @@ payload = create_payload(target="open-webui",
                          temperature=0.7, 
                          num_ctx=300, 
                          num_predict=300)
-
+```
 Output:
 
 [Meta Level 1 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-1-prompt.txt)  
@@ -357,6 +360,7 @@ Output:
 
 
 Level-2 Meta Prompt:
+```
 META_PROMPT = (
     "Generate a prompt that generates another prompt that can be used to perform a requirement analysis "
     "for adding educational functionality to an existing Discord-based chatbot."
@@ -369,7 +373,7 @@ payload = create_payload(target="open-webui",
                          temperature=0.7, 
                          num_ctx=300, 
                          num_predict=300)
-
+```
 ## Output:
 
 [Meta Level 2 Prompt](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/meta-level-2-prompt.txt)  
@@ -394,7 +398,7 @@ Few-shot prompting accomplishes this by providing the model with a few example i
 This technique is particularly beneficial as it reduces the requirement for large amounts of labeled data or fine-tuned models but still improves precision. It allows models to generalize better than zero-shot learning, where no examples are provided, but not as much as traditional supervised learning, which requires extensive numbers of marked data. Few-shot prompting is applicable in extensive domains of education software, chatbots, and AI services where flexibility and quick learning are required.
 
 ## First Experimentation:-
-
+```
 MESSAGE = "I want to add an educational chatbot that helps students understand advanced concepts in a much easier way to my Discord-based bot."
 
 FEW_SHOT = """You are a software requirements analyst. Your task is to analyze and define the requirements for adding an educational chatbot to a Discord-based bot. 
@@ -420,15 +424,16 @@ PROMPT = FEW_SHOT + '\n' + MESSAGE
 temperature=1.0, 
                          num_ctx=100, 
                          num_predict=100
-
+```
 In the above snippets, the few shot technique has been employed by adding one example to the prompt. However, the number of tokens is 100 since the length of the prompt is less than 100. 
 
 Output:
+[Few Shots Output 1](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/few-shots-output-1-example.txt)
  
 ## Second Experimentation:
 
 We tried to enhance the prompt by giving two examples this time.
-
+```
 FEW_SHOT = """
 
 You are a software requirements analyst. Your task is to analyze and define the requirements for adding an educational chatbot to a Discord-based bot. 
@@ -459,10 +464,10 @@ Response:
 
 Now, analyze the following request and generate the requirements:
 """
-
+```
 Output:
- 
-
+[Few Shots Output 2](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/few-shots-output-2-examples.txt) 
+```
 ## Third Experimentation:
 
 The prompt has nothing to change. Only the parameters are worked on.
@@ -470,11 +475,12 @@ The prompt has nothing to change. Only the parameters are worked on.
 temperature=0.2, 
 num_ctx=150, 
 num_predict=200
-
+```
 Since the required answer is technical, the temperature is set to a lower value for more factual based answer. We wanted the answer to be more clear and elaborate. Hence, the num_predict value is set to 200.
 
 Output:
- 
+
+[Few Shots Experiment With change in parameters](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/few-shots-output-2-examples-parameters.txt)
 
 Since we are a team of three, our experiment gave us a sharp insight into how Few-Shot Prompting, Example Variation, and Hyperparameter Tuning influence the response quality. From using a single example (Response 1), we noted that the chatbot's response did not have much depth and lacked essential features like concept mapping and progress monitoring. However, two-example prompting (Responses 2 and 3) led to better-structured responses that touched on important points such as adaptive learning, feedback mechanisms, and integration strategies. This was proof that two-shot prompting is far superior to one-shot prompting as it raises coherence and response completeness.
 We also experimented with hyperparameter tuning through specifically altering temperature, context length ('num_ctx'), and prediction tokens ('num_pred'). At temperature set at 1.0, 'num_ctx' at 100, and 'num_pred' at 100, Response 2 performed best, striking a balance between structure and detail and being clear and concise. However, lowering the temperature to 0.3 and 'num_ctx' to 150 and 'num_pred' to 200 (Response 3) produced a more factual but more rigid response. Although the increased context and predictive length helped in preserving details, it was not helpful in enhancing structuring considerably. The lowered temperature made the chatbot response less flexible and conversational, slightly lowering engagement.
@@ -497,7 +503,7 @@ It could be a typical prompt that would result in the model answering immediatel
 However, when prompted using Chain of Thought prompting, the model would produce: "Alice initially has 3 apples. She buys 5 more apples. Adding them together, 3 + 5 = 8. Thus, Alice has 8 apples."
 
 This method is particularly helpful for learning chatbots, like the one you're building for Discord, since it not only enables students to get the correct answer but also learn the reasoning behind it. Applying Chain of Thought prompting can improve how your chatbot educates complex concepts in math, science, and logic-based subjects.
-
+```
 ## First Experimentation:
 
 CHAIN_OF_THOUGHT = I am running a few minutes late; my previous meeting is running over.
@@ -561,16 +567,17 @@ To generate a structured and well-thought-out response, follow this reasoning pr
 ### ''Now, analyze the following request and generate the requirement analysis:''
 "I want to add an educational chatbot that helps students understand advanced concepts in a much easier way to my Discord-based bot."
 """
-
+```
 We employed the Chain of Thought Prompt technique in our code by giving a step-by-step process to give the result. Since the input has more words, the number of tokens is set to 1000, and for the answer to be very elaborate, the num_predict value is set to 300.
 
 Output:
- 
-Second Experimentation:
+ [Chain Of Thought First Experimentation](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/Chain-of-thought-first-experimentation.txt)  
+Second Experimentation:  
 Temperature set to 1.2
- 
-Third Experimentation:
-Temperature set to 0.5
+  [Chain Of Thought Second Experimentation](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/Chain-of-thought-Temperature-1.2.txt)  
+Third Experimentation:  
+Temperature set to 0.5  
+ [Chain Of Thought Third Experimentation](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/Chain-of-thought-Temperature-0.5.txt)
  
 
 ## Comparison of responses:
@@ -588,7 +595,7 @@ Based on these observations, we concluded that the most appropriate setting for 
 ## 7.	Generate Knowledge Technique
 
 Generate Knowledge Prompting is a prompt engineering method whereby a model is first prompted to create applicable background knowledge prior to answering a question or solving a problem. This method strengthens reasoning, precision, and comprehension, especially where a literal response might lack sufficient context. Instead of producing a response instantly, the model is subjected to a two-step process: one, it recollects or generates fundamental information on the subject, and second, employs the same information in generating a well-versed answer. For example, when a question is asked about why the sky appears blue, instead of responding "because of Rayleigh scattering," the model would begin by explaining what Rayleigh scattering is—shorter wavelengths like blue light scatter more than longer wavelengths like red—before applying that understanding to provide an answer. This way of thinking enhances it, makes it more accurate in its responses, and gives better explanations, so it is extremely well suited for educational use. Utilizing Generate Knowledge Prompting on your Discord study chatbot can help students comprehend complex concepts more effectively by encouraging systematic thinking and step-by-step learning.
-
+```
 ## Experimentation 1:
 
 MESSAGE = ("Before performing the requirement analysis, first generate foundational knowledge on how AI-powered "
@@ -608,16 +615,20 @@ MESSAGE = ("Before performing the requirement analysis, first generate foundatio
     "5. Example interactions demonstrating improved learning experience.\n\n"
     "First, generate the relevant knowledge step-by-step, then use that knowledge to structure the final requirement analysis. "
     "Format the response with clear sections and bullet points for readability.")
+```
+[Generate Knowledge Experimentation 1](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/generate-knowledge-temperature-0.7.txt)
 
 ## Experimentation 2: 
 Temperature set to 0.5
 
 Output:
+[Generate Knowledge Experimentation 2](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/generate-knowledge-temperature-0.5.txt)
  
 ## Experimentation 3:
 Temperature is set to 1.4
 
 Output:
+[Generate Knowledge Experimentation 3](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/generate-knowledge-temperature-1.4.txt)
  
 
 ## Analysis:
@@ -638,7 +649,7 @@ Because our focus is "requirement analysis for an educational chatbot," we shoul
 Prompt Chaining is a prompt engineering method in which two or more prompts are linked together in a sequence to guide an AI model through a complex task in incremental steps. Instead of formulating a final response in a single prompt, the task is broken down into intermediate steps, with each prompt building upon the output of its predecessor. This method improves reasoning, precision, and coherence and is therefore best used in problem-solving with multiple steps, content generation, and decision-making. Prompt chaining is being most widely used in educational chatbots, workflow automation, and guided AI interactions where a step-by-step approach must be used to obtain improved outputs.
 
 Code:
-
+```
 ##
 ## PROMPT CHAINING FOR REQUIREMENT ANALYSIS
 ##
@@ -701,14 +712,15 @@ payload_step3 = create_payload(target="open-webui",
 response_time3, response3 = model_req(payload=payload_step3)
 print("Final Requirement Analysis:\n", response3)
 if response_time3: print(f"Time taken: {response_time3}s")
-
+```
 
 Output:
- 
+[Prompt Chaining Output](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/prompt-chaining.txt)
+
 ## 9.	Retrieval Augmented Generation
 
 Code:
-
+```
 ##
 ## SINGLE-PROMPT RAG FOR REQUIREMENT ANALYSIS
 ##
@@ -750,9 +762,9 @@ payload = create_payload(target="open-webui",
 response_time, response = model_req(payload=payload)
 print(response)
 if response_time: print(f'Time taken: {response_time}s")
-
+```
 Output:
- 
+[RAG](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/RAG.txt)
 
 
 ## 10.	Automatic Reasoning
@@ -764,7 +776,7 @@ Automatic reasoning encompasses several types, including deductive reasoning (th
 For AI chatbots, including educational chatbots, automatic reasoning can provide logical explanations, verify answers, and guide users through systematic problem-solving. Students can have step-by-step solutions, logical explanations, and enhanced learning experiences by integrating automatic reasoning into a chatbot.
 
 Code:
-
+```
 AUTO_REASONING_PROMPT = (
     "Retrieve the most relevant knowledge from educational AI research and chatbot design principles to understand "
     "how an AI-powered Discord chatbot can simplify complex topics for students using toy examples.\n\n"
@@ -792,10 +804,12 @@ AUTO_REASONING_PROMPT = (
 
     "Ensure that the reasoning is step-by-step, fact-driven, and logically sound before generating the final requirement analysis."
 )
+```
 Output:
- 
+[Automated Reasoning](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2-PromptEngineering/blob/main/Outputs/Automatic-Reasoning.txt)
 
-Comparison of all the techniques:
+###Comparison of all the techniques:  
+
 For our use case—building an educational chatbot for Discord to simplify challenging topics for students—the best approach needs to enhance student engagement, provide systematic step-by-step descriptions, enable adaptive learning, and present a clear and logical requirement analysis for building the chatbot. Based on the experiment results and comparisons, the best approach is the integration of Prompt Chaining, Few-Shot Prompting, and Generate Knowledge Prompting.
 
 Prompt Chaining plays a vital role as it helps the chatbot break down complicated topics into minor, step-wise pieces so that students are led through the process of learning rather than being told one direct answer. Prompt Chaining increases engagement, and the chatbot turns more interactive in areas like math, science, and programming. For example, in describing how to solve a quadratic equation, the chatbot can start with defining the term, then apply the formula, and finally solve an example problem interactively. This manner, students learn concepts in a step-by-step logical sequence rather than memorizing the solutions.
@@ -808,7 +822,8 @@ Other approaches, such as Zero-Shot Prompting, Self-Consistency, and Retrieval-A
 
 By incorporating Prompt Chaining, Few-Shot Prompting, and Generate Knowledge Prompting, our chatbot will be interactive, structured, and responsive to learners' needs. Prompt chaining will give step-by-step, interactive instructions, few-shot prompting will bring better coherence to responses, and generate knowledge prompting will introduce depth and detail into explanations. This mixture will not just turn our chatbot into an information outlet but also into a good digital tutor, one that can suit different learning patterns and make it easy for students to grasp difficult ideas. 
 
-GITHUB REPO: https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2
+GITHUB REPO:   
+[GitHub](https://github.com/VamsiNamballa/COT6930-SyntaxSultans-Assignment-2)
 
 
 ## Final Thoughts:-
