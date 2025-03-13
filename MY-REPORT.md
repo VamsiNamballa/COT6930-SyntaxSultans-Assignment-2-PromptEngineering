@@ -5,12 +5,13 @@ A DISCORD BASED CHATBOT THAT WORKS AS A STUDY COMPANION THAT HELPS STUDENTS UNDE
 ## 1-Liner Description:
 This research explores advanced prompting techniques to enhance requirement analysis for a Discord-based educational chatbot using the phi4 model. The goal is to evaluate different prompting strategies and optimize chatbot capabilities for student learning.
 
-Authors:
+## Authors:
 Pavan Vamsi Namballa (Z23752169)
 Anuja Chandran Girija (Z23797197)
 Neethika Prodduturi (Z23814182)
 
-Academic Supervisor:		Dr. Fernando Koch
+## Academic Supervisor:		
+Dr. Fernando Koch
 
 Research Question:
 How can different prompting techniques improve the requirement analysis process for developing an effective Discord-based AI study companion using phi4 ?
