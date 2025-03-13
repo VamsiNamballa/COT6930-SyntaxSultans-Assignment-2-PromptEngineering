@@ -65,14 +65,14 @@ PROMPT = MESSAGE
                          temperature=1.0, 
                          num_ctx=100, 
                          num_predict=100
- 
+``` 
 
 As we can see, we have a message called “What is 984*log(2)” which is given as a prompt to the model. Zero-Shot Prompting is a method in which an AI model is presented with a task for the first time with no examples or instructions. The model draws on only its pre-trained knowledge to produce an answer. It is helpful for rapid answers but potentially not accurate for more complicated tasks.
 
 Time Taken for the Response: 7.215 Seconds.
 
 We would like to alter the above code snippet for generating the requirement analysis for our project “Discord-based educational chatbot that helps students understand harder concepts in an easier way”. A new file has been created with the name ‘zero_shot_copy-1.ipynb’.
-
+```
 MESSAGE = "Generate a requirement analysis for an educational chatbot that simplifies advanced topics for students using toy examples."
 temperature=0.7, 
 num_ctx=200, # We want the model to remember large messages if possible
